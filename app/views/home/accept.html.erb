@@ -1,0 +1,5 @@
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<h1> Accept </h1>
+<h1> Email: <%= current_user.email %></h1>
+<h1> Tetherer: <%= current_user.tetherer.email %></h1>
+<h1> Balance: <%= current_user.balance %></h1>

@@ -3,6 +3,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
     create_table(:users) do |t|
       ## Database authenticatable
       t.string :email,              :null => false, :default => ""
+      t.string :mac_address,        :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
 
       ## Recoverable
@@ -33,6 +34,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Token authenticatable
       # t.string :authentication_token
 
+      t.float :balance, :default => 0.0
+      t.float :data, :default => 0.0
+      t.integer :tetherer_id 
 
       t.timestamps
     end

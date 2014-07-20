@@ -1,19 +1,17 @@
 class HomeController < ApplicationController
 
-  before_filter :mac_address, :except => [:sorry]
-  before_filter :authenticate_user!
 
-  def index
+  def accept
+    if ! user_signed_in?
+      if !params[:mac_address] 
+        redirect_to sorry_url
+      end
+      redirect_to new_user_session_path(mac_address: params[:mac_address], 
+                                          tetherer_id: params[:tetherer_id])
+    end
   end
 
   def sorry
-  end
-
-  def mac_address
-    if ! params[:mac] 
-      puts "param: #{params[:mac]}"
-      redirect_to sorry_url
-    end
   end
 
 end
