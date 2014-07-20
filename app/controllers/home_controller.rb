@@ -16,9 +16,7 @@ class HomeController < ApplicationController
   def log_in
     user = User.find_by_email(params[:email])
     if user and user.valid_password?(params[:password])
-      if request.ip != ENV['CLIENT_IP']
-        current_user.update_attribute!(last_tether_ip: request.remote_ip)
-      end
+      current_user.update_attribute!(last_tether_ip: request.remote_ip)
       render status: 200, json: "Yes"
     else
       render status: 403, json: "No"
