@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :connections
+  has_many :connections, foreign_key: 'tetherer_id'
   has_many :devices
   has_many :connected_devices, through: :connections, source: :device
 end

@@ -5,8 +5,6 @@ BitfiServer::Application.routes.draw do
   get '/accept' => 'home#accept'
   get '/login' => 'home#log_in'
 
-  match '*path' => redirect('/')
-
   resources :users, only: :none do
     get :connected_devices, on: :member
     resources :connections, only: [:create, :index]
@@ -15,4 +13,6 @@ BitfiServer::Application.routes.draw do
   resources :connections, only: :none do
     post :activate, on: :member
   end
+
+  match '*path' => redirect('/')
 end

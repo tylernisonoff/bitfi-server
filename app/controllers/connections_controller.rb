@@ -1,8 +1,6 @@
 class ConnectionsController < ApplicationController
-  respond_to :json
-
   def create
-    @device = Device.find_by_mac_address(params[:mac_address])
+    @device = Device.find_or_create_by_mac_address(params[:mac_address])
     @connection = Connection.new(
       tetherer_id: params[:user_id],
       device_id: @device.id,

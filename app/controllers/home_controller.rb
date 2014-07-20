@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   def index
     @tetherer = User.find_by_last_tether_ip(request.remote_ip)
     @connection = @tetherer.connections.pending.joins(:device)
-      .where(device: { user_id: current_user.id }).last
+      .where(devices: { user_id: current_user.id }).last
     if @connection.nil?
       @connection = @tetherer.connections.pending.joins(:device)
         .where('devices.user_id IS NULL').includes(:device).last
@@ -16,7 +16,7 @@ class HomeController < ApplicationController
   def log_in
     user = User.find_by_email(params[:email])
     if user and user.valid_password?(params[:password])
-      current_user.update_attribute!(last_tether_ip: request.remote_ip)
+      user.update_attributes!(last_tether_ip: request.remote_ip)
       render status: 200, json: "Yes"
     else
       render status: 403, json: "No"
