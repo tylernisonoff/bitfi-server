@@ -14,5 +14,5 @@ BitfiServer::Application.routes.draw do
     post :activate, on: :member
   end
 
-  match '*path' => redirect('/')
+  match '*path' => 'home#index'
 end
