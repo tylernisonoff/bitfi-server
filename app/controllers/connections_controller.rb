@@ -16,7 +16,7 @@ class ConnectionsController < ApplicationController
   end
 
   def activate
-    @connection = Connection.find(params[:connection_id])
+    @connection = Connection.find(params[:id])
     @connection.update_attribute!(:active, true)
     redirect_to 'google.com'
   end
