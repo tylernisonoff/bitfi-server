@@ -1,0 +1,89 @@
+body {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #fff;
+  //background-color: #bbebac;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn-primary{
+  //background-color: #8ce071;
+  background-color: #50afa7;
+  border: 0px;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.btn-primary:hover{
+  background-color: #617F7D;
+}
+
+.block{
+  width: 25em;
+  padding: 2em;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sign-in-area{
+  background-color: #84e7df;
+}
+
+a{
+  color: #617F7D;
+}
+
+.radio input[type=radio], .radio-inline input[type=radio], .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox]{
+  margin-left: 0px;
+}
+
+.reg{
+  background-color: #5FED47;
+}
+
+#regz{
+  background-color: #36CC00;
+}
+
+#regz:hover{
+  background-color: #617F7D;
+}
+
+.block h2{
+  color: #fff;
+}
