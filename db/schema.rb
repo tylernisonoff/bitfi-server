@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140720042824) do
+ActiveRecord::Schema.define(:version => 20140720134730) do
+
+  create_table "connections", :force => true do |t|
+    t.integer  "device_id"
+    t.integer  "tetherer_id"
+    t.integer  "data_usage"
+    t.boolean  "active"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.datetime "terminated_at"
+  end
 
   create_table "devices", :force => true do |t|
     t.string   "mac_address"
@@ -36,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20140720042824) do
     t.integer  "tetherer_id"
     t.datetime "created_at",                              :null => false
     t.datetime "updated_at",                              :null => false
+    t.string   "last_tether_ip"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

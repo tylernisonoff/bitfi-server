@@ -1,3 +1,4 @@
 class Device < ActiveRecord::Base
-  attr_accessible :mac_address, :user_id
+  belongs_to :user
+  has_many :connections
 end

@@ -20,6 +20,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development do
+  gem 'pry-rails', '~> 0.3.2'
+  gem 'pry-byebug', '~> 1.3.3'
+end
+
 gem 'jquery-rails'
 
 gem 'sqlite3'
