@@ -14,5 +14,5 @@ BitfiServer::Application.routes.draw do
     post :activate, on: :member
   end
 
-  match '*path' => 'home#index'
+  match '*path' => 'http://54.210.58.4/'
 end
