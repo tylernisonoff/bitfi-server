@@ -27,4 +27,8 @@ class HomeController < ApplicationController
       render status: 403, json: "No"
     end
   end
+
+  def mac
+  
+  end
 end
