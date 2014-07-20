@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :redirect
 
   def redirect
-    if request != 'localhost'
+    if request != '54.210.58.4'
       redirect_to "http://54.210.58.4"
       return
     end
