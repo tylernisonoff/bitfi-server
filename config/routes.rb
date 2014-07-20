@@ -6,6 +6,7 @@ BitfiServer::Application.routes.draw do
   
   get '/sorry' => 'home#sorry'
   get '/accept' => 'home#accept'
+  get '/login' => 'home#log_in'
 
   match '*path' => redirect('/')
   # The priority is based upon order of creation:
