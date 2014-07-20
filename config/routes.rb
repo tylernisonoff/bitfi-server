@@ -2,10 +2,12 @@ BitfiServer::Application.routes.draw do
   devise_for :users, :controllers => { registrations: 'users/registrations' }
 
 
-  root :to => 'home#accept'
+  root :to => 'home#index'
   
   get '/sorry' => 'home#sorry'
+  get '/accept' => 'home#accept'
 
+  match '*path' => redirect('/')
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
 
 
+  def index
+
+  end
+
   def accept
     if ! user_signed_in?
       if !params[:mac_address] 
