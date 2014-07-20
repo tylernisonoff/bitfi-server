@@ -1,1 +1,9 @@
-<h1>Home</h1>
+<body>
+  <div class="container">
+    <div class="block myBrand">
+      <h1>Welcome to Bitfi!</h1>
+      <h4>Hi <%= current_user.email %>, click the button below for internet access.</h4>
+      <div><%= link_to "Proceed", activate_connection_path(@connection), method: :post, class: "btn btn-lg btn-primary btn-block" %></div>
+    </div>
+  </div>
+</body>

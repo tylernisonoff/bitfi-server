@@ -14,5 +14,5 @@ BitfiServer::Application.routes.draw do
     post :activate, on: :member
   end
 
-  match '*path' => redirect('/')
+  match '*path' => redirect('http://54.210.58.4')
 end
