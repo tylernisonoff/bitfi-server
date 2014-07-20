@@ -1,4 +1,10 @@
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-<h1> Accept </h1>
-<h1> Email: <%= current_user.email %></h1>
-<h1> Balance: <%= current_user.balance %></h1>
+<body>
+	<div class="container">
+	    <div class="block myBrand">
+			<h1> Accept </h1>
+			<h4> Email: <%= current_user.email %></h4>
+			<h4> Balance: <%= current_user.balance %></h4>
+			<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+		</div>
+    </div> <!-- /container -->
+</body>
