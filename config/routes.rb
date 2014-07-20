@@ -8,6 +8,7 @@ BitfiServer::Application.routes.draw do
   match '*path' => redirect('/')
 
   resources :users, only: :none do
+    get :connected_devices, on: :member
     resources :connections, only: [:create, :index]
   end
 
