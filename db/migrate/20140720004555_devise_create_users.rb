@@ -33,6 +33,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Token authenticatable
       # t.string :authentication_token
 
+      t.float :balance, :default => 0.0
+      t.float :data, :default => 0.0
+      t.integer :tetherer_id 
 
       t.timestamps
     end
