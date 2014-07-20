@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
 
   before_filter :mac_address, :except => [:sorry]
+  before_filter :authenticate_user!
+
   def index
   end
 
